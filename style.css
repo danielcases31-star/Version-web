@@ -1,0 +1,122 @@
+/*  CONFIGURATION GÉNÉRALE DE LA PAGE  */
+body {
+    background-color: #2c3e50; /* Fond bleu nuit */
+    font-family: 'Courier New', Courier, monospace; /* Police rétro */
+    display: flex;
+    justify-content: center; /* Centrage horizontal */
+    align-items: center;     /* Centrage vertical */
+    min-height: 100vh;       /* Pleine hauteur d'écran */
+    margin: 0;
+    color: white;
+}
+
+/* Cadre blanc) */
+.main-container {
+    text-align: center;
+    background-color: #ecf0f1;
+    color: black;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5); /* Ombre portée */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* STYLE DU MENU DE DÉMARRAGE */
+#menu h1 { margin-top: 0; font-size: 40px; color: #2c3e50; }
+
+.menu-buttons button {
+    display: block;
+    width: 200px;        /* Largeur fixe pour les boutons du menu */
+    margin: 10px auto;   /* Centré */
+    padding: 15px;
+    font-size: 18px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+.menu-buttons button:hover { background-color: #2980b9; transform: scale(1.05); }
+
+/*  Ecran de jeu */
+.hidden { display: none !important; } /* pour cacher des éléments */
+
+/* la grille  */
+.grid {
+    display: flex;
+    flex-wrap: wrap; /* permet le retour à la ligne des cases */
+    background-color: #bdc3c7;
+    border: 5px solid #7f8c8d;
+    margin: 20px auto;
+}
+
+/* style individuel des cases */
+.case {
+    height: 40px;
+    width: 40px;
+    box-sizing: border-box; 
+    border: 2px solid;
+    border-color: #fff #7b7b7b #7b7b7b #fff; /* effet 3D */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    user-select: none;
+}
+
+.case:hover { background-color: #dcdcdc; } /* effet de survol */
+.checked { background-color: #bdc3c7; border: 1px solid #999; } /* case révélée */
+
+/* style pour le drapeau */
+.flag {
+    color: red;
+    font-size: 24px;
+}
+
+/*  boutons de contrôle  */
+.controls button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-family: inherit;
+    min-width: 140px; /* largeur bouton */
+}
+
+/* couleurs spécifiques des boutons */
+#restart-btn { background-color: #27ae60; } /* vert */
+#restart-btn:hover { background-color: #2ecc71; }
+
+#menu-btn { background-color: #e74c3c; } /* rouge */
+#menu-btn:hover { background-color: #c0392b; }
+
+/* bouton de mode */
+#mode-btn {
+    background-color: #f39c12; /* orange */
+}
+#mode-btn:hover { background-color: #e67e22; }
+
+/*  couleurs de chiffres  */
+.one { color: blue; }
+.two { color: green; }
+.three { color: red; }
+.four { color: purple; }
+.five { color: maroon; }
+.bomb-style { background-color: red !important; }
+
+/*  résultats */
+#resultat {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    height: 30px;
+}
+.win { color: #27ae60; font-size: 24px; text-transform: uppercase; }

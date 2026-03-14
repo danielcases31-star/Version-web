@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Démineur</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <div id="menu">
+            <h1>DÉMINEUR</h1>
+            <p>Choix du niveau :</p>
+            <div class="menu-buttons">
+                <button id="btn-8">Facile (8x8)</button>
+                <button id="btn-10">Moyen (10x10)</button>
+                <button id="btn-16">Difficile (16x16)</button>
+            </div>
+        </div>
+
+        <div id="game" class="hidden">
+            <h2 id="level-title">Niveau</h2>
+            
+            <div class="grid"></div>
+            
+            <div class="controls">
+                <button id="mode-btn">⛏️ Mode Creuser</button>
+                
+                <button id="restart-btn">Recommencer</button>
+                <button id="menu-btn">Retour Menu</button>
+            </div>
+            
+            <div id="resultat"></div>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
