@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const restartBtn = document.getElementById('restart-btn');
     const menuBtn = document.getElementById('menu-btn');
     
-    // Sélection du bouton de mode
+    // selection du bouton de mode
     const modeBtn = document.getElementById('mode-btn');
 
     // variables globales
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let squaresRevealed = 0;
     let isFirstClick = true; 
     
-    // Variable pour savoir si on est en mode Drapeau (true) ou Creuser (false)
+    // variable pour savoir si on est en mode drapeau (true) ou creuser (false)
     let isFlagging = false; 
 
     // gestion menu
@@ -52,18 +52,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     restartBtn.addEventListener('click', () => { initBoard(); });
 
-    //Gestion bouton Mode
+    //gestion bouton Mode
     modeBtn.addEventListener('click', () => {
-        // On inverse la valeur (Vrai devient Faux, Faux devient Vrai)
+        // on inverse la valeur (Vrai devient Faux, Faux devient Vrai)
         isFlagging = !isFlagging;
         
-        // On met à jour le texte du bouton pour le joueur
+        // on met à jour le texte du bouton pour le joueur
         if (isFlagging) {
             modeBtn.innerHTML = "🚩 Mode Drapeau";
-            modeBtn.style.backgroundColor = "#e74c3c"; // Rouge pour indiquer danger/drapeau
+            modeBtn.style.backgroundColor = "#e74c3c"; // rouge pour indiquer danger/drapeau
         } else {
             modeBtn.innerHTML = "⛏️ Mode Creuser";
-            modeBtn.style.backgroundColor = "#f39c12"; // Orange retour normal
+            modeBtn.style.backgroundColor = "#f39c12"; // orange retour normal
         }
     });
 
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         isFirstClick = true; 
         squaresRevealed = 0;
         
-        // On remet le mode par défaut en "Creuser"
+        // on remet le mode par défaut en "Creuser"
         isFlagging = false;
         modeBtn.innerHTML = "⛏️ Mode Creuser";
         modeBtn.style.backgroundColor = "#f39c12";
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         resultatDisplay.innerHTML = '';
         resultatDisplay.classList.remove('win');
 
-        // Création des cases
+        // création des cases
         for (let i = 0; i < width * width; i++) {
             const square = document.createElement('div');
             square.setAttribute('id', i);
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (isGameOver) return;
         
-        // Si la case est déjà révélée on ne fait rien
+        // si la case est déjà révélée on ne fait rien
         if (square.classList.contains('checked')) return;
 
         // gestion mode drapeau
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 square.classList.add('flag');
                 square.innerHTML = '🚩';
             } else {
-                // S'il y a déjà un drapeau, on l'enlève
+                // s'il y a déjà un drapeau, on l'enlève
                 square.classList.remove('flag');
                 square.innerHTML = '';
             }
@@ -249,7 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (nx >= 0 && nx < width && ny >= 0 && ny < width) {
                         let newId = ny * width + nx;
                         const newSquare = document.getElementById(newId);
-                        // On vérifie que la case n'a pas de drapeau avant de cliquer automatiquement dessus
+                        // on vérifie que la case n'a pas de drapeau avant de cliquer automatiquement dessus
                         if (!newSquare.classList.contains('flag')) {
                             click(newSquare);
                         }

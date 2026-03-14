@@ -1,35 +1,35 @@
-/*  CONFIGURATION GÉNÉRALE DE LA PAGE  */
+/*  configuration de la page  */
 body {
-    background-color: #2c3e50; /* Fond bleu nuit */
-    font-family: 'Courier New', Courier, monospace; /* Police rétro */
+    background-color: #2c3e50; /* fond bleu nuit */
+    font-family: 'Courier New', Courier, monospace; /* police rétro */
     display: flex;
-    justify-content: center; /* Centrage horizontal */
-    align-items: center;     /* Centrage vertical */
-    min-height: 100vh;       /* Pleine hauteur d'écran */
+    justify-content: center; /* centrage horizontal */
+    align-items: center;     /* centrage vertical */
+    min-height: 100vh;       /* pleine hauteur d'écran */
     margin: 0;
     color: white;
 }
 
-/* Cadre blanc) */
+/* cadre blanc */
 .main-container {
     text-align: center;
     background-color: #ecf0f1;
     color: black;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5); /* Ombre portée */
+    box-shadow: 0 0 20px rgba(0,0,0,0.5); /* ombre portée */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* STYLE DU MENU DE DÉMARRAGE */
+/* style menu de démarrage */
 #menu h1 { margin-top: 0; font-size: 40px; color: #2c3e50; }
 
 .menu-buttons button {
     display: block;
-    width: 200px;        /* Largeur fixe pour les boutons du menu */
-    margin: 10px auto;   /* Centré */
+    width: 200px;        /* largeur fixe pour les boutons du menu */
+    margin: 10px auto;   /* pour que ce soit centré */
     padding: 15px;
     font-size: 18px;
     background-color: #3498db;
@@ -41,7 +41,7 @@ body {
 }
 .menu-buttons button:hover { background-color: #2980b9; transform: scale(1.05); }
 
-/*  Ecran de jeu */
+/*  ecran de jeu */
 .hidden { display: none !important; } /* pour cacher des éléments */
 
 /* la grille  */
